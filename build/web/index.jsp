@@ -125,15 +125,22 @@
                 
                 <div class="small-12 columns chat-content">
 
+                    
+                    <div class="small-6 columns end boot-answer">
+                        <p>Hola</p>
+                    </div>
+                    
+                  
+                    
                 </div>
             </div>
             
 
-            <form method="POST" action="./robocare" data-abide="ajax" novalidate>
+            <form method="POST" id="roboCareChat" action="./robocare" data-abide="ajax" novalidate>
                 <div class="row ptop-15">
                     <div class="small-10 medium-11 columns padding0">
                         <label>
-                            <input type="text" name="message" placeholder="Escribe un mensaje..."  required/>
+                            <input type="text" name="message" placeholder="Escribe un mensaje..." autocomplete="off"  required/>
                         </label>
                     </div>
                     <div class="small-2  medium-1 columns padding0">

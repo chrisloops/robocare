@@ -886,14 +886,14 @@ a.cta--st:hover:before{
 
 .boot-answer{
     background-color: #5e5e5e;
-    border-radius: 100px;
+    border-radius: 30px;
     margin: 5px
 }
 
 
 .person-answer{
     background-color: #262262;
-    border-radius: 100px;
+    border-radius: 30px;
     margin: 5px
 }
 

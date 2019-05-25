@@ -15,6 +15,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import Controllers.RoboCareController;
+import Models.BaseData;
 
 /**
  *
@@ -37,14 +39,17 @@ public class RoboCare extends HttpServlet {
        
         
         
+        RoboCareController  controller = new RoboCareController();
           switch(request.getMethod()){
          
             case "POST":
                 
+                String message = request.getParameter("message");
+                
                 if (isAjax(request)){
                     
                     Map<String, String> response_dta = new HashMap<String, String>();
-                    response_dta.put("response", "Hola");
+                    response_dta.put("response", controller.bringAnAnswer(message));
                     
                     String json = new Gson().toJson(response_dta);
                     response.setContentType("application/json");
